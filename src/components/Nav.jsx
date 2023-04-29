@@ -3,11 +3,14 @@ import { FiMenu, FiSearch } from "react-icons/fi";
 import logo from "../assets/keep.png";
 import me from "../assets/me.jpg";
 
-const Nav = () => {
+const Nav = ({ setOpenSidebar }) => {
   return (
     <div className="flex justify-between items-center border-b-2 shadow-sm shadow-gray-100 py-2 px-4">
       <div className="flex items-center gap-2 sm:gap-4">
-        <FiMenu className="text-2xl cursor-pointer" />
+        <FiMenu
+          className="text-2xl cursor-pointer"
+          onClick={() => setOpenSidebar((prev) => !prev)}
+        />
         <div className="w-10 h-10">
           <img src={logo} alt="logo" className="w-full h-full object-cover" />
         </div>
