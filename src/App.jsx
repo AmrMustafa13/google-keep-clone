@@ -9,7 +9,7 @@ const App = () => {
   return (
     <>
       <Nav setOpenSidebar={setOpenSidebar} />
-      <div className="flex">
+      <div className="flex justify-start">
         <Sidebar openSidebar={openSidebar} />
         <Routes>
           <Route path="/" element={<Home />} />

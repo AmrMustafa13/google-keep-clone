@@ -5,7 +5,7 @@ const Sidebar = ({ openSidebar }) => {
   if (!openSidebar)
     return (
       <ul className="pt-1 pl-2 text-[16px]">
-        <li className="flex items-center gap-2 cursor-pointer bg-yellow-200  rounded-full p-4 transition duration-200">
+        <li className="flex items-center gap-2 cursor-pointer bg-yellow-100  rounded-full p-4 transition duration-200">
           <TbNotes />
         </li>
         <li className="flex items-center gap-2 cursor-pointer hover:bg-gray-200 rounded-full p-4 transition duration-200">
@@ -24,7 +24,7 @@ const Sidebar = ({ openSidebar }) => {
     );
   return (
     <ul className="pt-1 text-[16px]">
-      <li className="flex items-center gap-2 cursor-pointer bg-yellow-200  rounded-e-3xl pl-4 py-4 pr-10 transition duration-200">
+      <li className="flex items-center gap-2 cursor-pointer bg-yellow-100 rounded-e-3xl pl-4 py-4 pr-10 transition duration-200">
         <TbNotes />
         <span>Notes</span>
       </li>
