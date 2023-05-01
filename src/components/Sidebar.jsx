@@ -1,7 +1,7 @@
 import React from "react";
 import { TbNotes, TbArchive, TbBell, TbEdit, TbTrash } from "react-icons/tb";
 
-const Sidebar = ({ openSidebar }) => {
+const Sidebar = ({ openSidebar, setOpenEditLabels }) => {
   if (!openSidebar)
     return (
       <ul className="pt-1 pl-2 text-[16px]">
@@ -11,7 +11,10 @@ const Sidebar = ({ openSidebar }) => {
         <li className="flex items-center gap-2 cursor-pointer hover:bg-gray-200 rounded-full p-4 transition duration-200">
           <TbBell />
         </li>
-        <li className="flex items-center gap-2 cursor-pointer hover:bg-gray-200 rounded-full p-4 transition duration-200">
+        <li
+          className="flex items-center gap-2 cursor-pointer hover:bg-gray-200 rounded-full p-4 transition duration-200"
+          onClick={() => setOpenEditLabels(true)}
+        >
           <TbEdit />
         </li>
         <li className="flex items-center gap-2 cursor-pointer hover:bg-gray-200 rounded-full p-4 transition duration-200">
@@ -32,7 +35,10 @@ const Sidebar = ({ openSidebar }) => {
         <TbBell />
         <span>Reminders</span>
       </li>
-      <li className="flex items-center gap-2 cursor-pointer hover:bg-gray-200 rounded-e-3xl pl-4 py-4 pr-10 transition duration-200">
+      <li
+        className="flex items-center gap-2 cursor-pointer hover:bg-gray-200 rounded-e-3xl pl-4 py-4 pr-10 transition duration-200"
+        onClick={() => setOpenEditLabels(true)}
+      >
         <TbEdit />
         <span>Edit labels</span>
       </li>
